@@ -15,11 +15,14 @@ list.addEventListener('click', function(e) {
   const id = e.target.id;
   const classes = e.target.getAttribute('class').split(' ');
   const completed = classes.includes('completed');
+  const item = document.getElementById(id);
+
   axios.patch(`http://localhost:3000/items/${id}`, {
     completed: !completed,
+  }).catch(function() {
+    item.classList.toggle('completed');
   });
   
-  const item = document.getElementById(id);
   item.classList.toggle('completed');
 });
 axios.get('http://localhost:3000/items').then(function(resp) {
@@ -47,6 +50,7 @@ form.addEventListener('submit', function(e) {
   axios.post('http://localhost:3000/items', {
     id,
     title,
+    completed: false,
   }).then(function() {
     const todoItem = document.createElement('li');
     todoItem.classList.add('item');
@@ -55,5 +59,3 @@ form.addEventListener('submit', function(e) {
     list.append(todoItem);
   });
 });
-
-

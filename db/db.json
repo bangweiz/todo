@@ -3,7 +3,7 @@
     {
       "id": "32915763-d351-463b-bdff-e6e3e5566772",
       "title": "complete todo list 1",
-      "completed": false
+      "completed": true
     },
     {
       "id": "8cc8fe65-187a-465b-bdf9-dc53d97bb0d3",
@@ -12,7 +12,8 @@
     },
     {
       "id": "d62d9ea7-6060-4491-809c-9ca1dc388d99",
-      "title": "Hello World"
+      "title": "Hello World",
+      "completed": false
     }
   ]
 }
