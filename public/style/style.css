@@ -44,6 +44,12 @@ body {
 .item {
   font-size: 20px;
   padding: 10px 0;
+  cursor: pointer;
+}
+
+.item.completed {
+  color: gray;
+  text-decoration: line-through;
 }
 
 .add-input {
