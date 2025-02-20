@@ -7,21 +7,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <title>Todo</title>
 </head>
 <body>
   <div class="panel">
     <p class="date" id="date">Thursday, 20 Feb 2025</p>
     <h1 class="title">To Do List</h1>
-    <ul class="list">
-      <li class="item">To do item 1</li>
-      <li class="item">To do item 1</li>
-      <li class="item">To do item 1</li>
+    <ul class="list" id="list">
     </ul>
-    <form class="add-form">
-      <input class="add-input" type="text" placeholder="add task...">
+    <form id="add-form">
+      <input class="add-input" id="item" name="item" type="text" placeholder="add task...">
+      <button class="btn">+</button>
     </form>
-    <button class="btn">+</button>
   </div>
   <script type="module" src="/js/index.js"></script>
 </body>
